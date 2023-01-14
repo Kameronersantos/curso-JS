@@ -30,18 +30,31 @@ function factorial(x){
 
 // UM par de chaves contendo zero ou mais instruções JavaScript. Essas instruções são o corpo da função: elas são executada quando a função é chamada 
 
-  function comcatenar(x,y) {
+  // function comcatenar(x,y) {
     
-if( x == isNaN(x) || y == x ) {
-    return x+y
-} else{
-    return new Error('no string')
-}
+// if( x == isNaN(x) || y == x ) {
+//     return x+y
+// } else{
+//     return new Error('no string')
+// }
     
     
-  }
+//   }
 
-  var f = "palavra";
-  var t = "palavra";
+//   var f = "palavra";
+//   var t = "palavra";
   
-  console.log(comcatenar(f,t))
+//   console.log(comcatenar(f,t))
+
+// Esta expressão de função define uma função que eleva seu argumento ao quadrado
+// Note que a atribuimos a uma variavel
+var quadrado = function(x){return x*x};
+
+// As expressões de função pode incluir nomes, o que é útil a recursividade
+var f = function fact(x){if(x <=1){return 1}else{return x*fact(x-1);}};
+
+// As expressões de função também podem ser usadas como argumento de outra função 
+Data.sort(function(a,b){return a-b});
+
+// Às vezes as expressões de funções são definidas e chamadas imediatamente
+var dezenasaoquadrado = (function(x){return x*x;} (10));

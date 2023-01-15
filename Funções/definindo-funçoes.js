@@ -54,7 +54,17 @@ var quadrado = function(x){return x*x};
 var f = function fact(x){if(x <=1){return 1}else{return x*fact(x-1);}};
 
 // As expressões de função também podem ser usadas como argumento de outra função 
-Data.sort(function(a,b){return a-b});
+data.sort(function(a,b){return a-b});
 
 // Às vezes as expressões de funções são definidas e chamadas imediatamente
 var dezenasaoquadrado = (function(x){return x*x;} (10));
+
+// função aninhada
+// Em JavaScript, as funções pode ser aninhada dentro de outras funções. por exemplo:
+
+function hipotenusa(a,b){
+  function quadrado(x) {return x*x;}
+  return Math.sqrt(quadrado(a) + quadrado(b));
+}
+
+// O interessante a respeito das funções aninhada são as suas regras de escopo de variável: elas podem acessar os parâmetro e as variáveis da função (ou funções) dentro das quais estão aninhadas.

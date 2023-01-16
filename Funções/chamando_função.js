@@ -23,3 +23,43 @@ console.log(total)
 // As funçoes são chamadas como funções ou como métodos com uma expressão de invocação 
 // Uma expressão de invocação consiste em uma eexpressão de função que é avaliadacomo um objeto função, seguida por um parêntese de abertura, uma lista de zero ou mais expressões de argumento separada com vírgula é um parêntese de fechamento.
 // Em uma chamada cada expressão de argumento(aqueles entre parênteses) é avaliada os valores resultantes se tornam os argumentos da função. Esses valores são atribuidos aos parâmentros nomeados na definição da função. No  corpo da funçaõ, uma referencia um parâmetro é avaliada com valor de argumento correspondente.
+// Para uma chamada de função normal, o valor de retorno da função torna-se o valor da expressão de invocação.Se a função retorna porque o interpretador chega no final, o valor do retorno undefined. Se a função retorna porque executa uma instrução return, o valor de retorno é o valor da expressãp que vem após a intrução return ou undefined, caso a instrução return não tenha valor algum
+
+var strict = (function(){return!this;});
+// define e chama uma função para determinar se estamos no modo restrito
+
+// chamada de método
+// Um método nada mais é do que função JavaScript armazenada em uma propriedadede um objeto Se vc tem uma função F e um objeto O, pode definir um método chamado M de O com a linha a seguir
+
+// O primeiro método vc chama uma função para propredade de M 
+ var O = {M:undefined}
+ function F(x,y) {
+    var cal1 = x + x;
+    var cal2 = y + y;
+    return cal1 * cal2 
+ }
+O.M = F
+// tendo definido o metodo M() do objeto o, chame-o como segue
+// Ou então se M() espera dois argumentos, voce pode chama-lo como segue
+console.log(O.M(5,5))
+// No Segundo método vc chama uma propriedade denominada como função para calacular as outras propriedades do objeto neste caso dentro da função qualquer propriedade é colocado um this. antes de qualquer argumento
+var calculador = {  // Um objeto literal
+    operando1:1,
+    operando2:1,
+    add: function(){
+        // Note o uso da palavra-chave this para calcular 1+1
+        this.resultado = this.operando1 + this.operando2;
+    }
+};
+calculador.add(); // Uma chamada de método para calcular 1+1.
+console.log(calculador.resultado) 
+
+var idade = {
+    individo1: 30,
+    individo2: 47,
+    media: function(){
+        this.m = (this.individo1 + this.individo2) / 2
+    }
+}
+idade.media();
+console.log(idade.m)

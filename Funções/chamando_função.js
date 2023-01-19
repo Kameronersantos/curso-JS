@@ -63,3 +63,24 @@ var idade = {
 }
 idade.media();
 console.log(idade.m)
+
+// A maioria das chamadas de método usa a notação de ponto para acesso a propriedade, mas as expressões de acesso á propriedades que utilizam colchetes também causam chamadas de métodos. As seguintes são ambas chamadas de mátodos, por exemplo 
+
+console.log(O["M"](10,10)) // outra maneira de escrever O.M(x,y)
+
+// pra fazer esse exmplo depois =>(a[n](z)) // também é uma maneira de método (sopondo que a[n] seja uma função)
+
+
+// As chamadas de métodos também oodem envolver expressões de acesso á propriedade mais completaxas:
+
+Custumer.surname.toUpperCase() // chama o método em custumer.surname
+
+console.log(F().M())
+
+// Os métodos e a palavra-chave this são fundamentais para o paradigma da programação orietada a objeto. 
+
+
+rect.setSise(width, height);
+setRectSise(rect,width,height);
+
+// As funções hipoteticas chamadas nessas duas linhas de código podem efetuar exatamente a mesma operação no objeto (hipotetico) rect, mas a sintaxe da chamada de métodos na primeira linha transmite mais claramente a ideia de que o foco principal da operação é o objeto rect

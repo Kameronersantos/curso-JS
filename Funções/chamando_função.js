@@ -1,4 +1,5 @@
 // chamando funções 
+// pagina 162 do livro
 // O codigo JavaScript que costitui um corpo de função não é executado quando a função é definida mas quando ela é chamada. Em JavaScript as funções podem ser chamadas de quatro maneiras:
 // Como funções
 // Como métodos
@@ -29,6 +30,7 @@ var strict = (function(){return!this;});
 // define e chama uma função para determinar se estamos no modo restrito
 
 // chamada de método
+// pagina 162 a 163 do livro
 // Um método nada mais é do que função JavaScript armazenada em uma propriedadede um objeto Se vc tem uma função F e um objeto O, pode definir um método chamado M de O com a linha a seguir
 
 // O primeiro método vc chama uma função para propredade de M 
@@ -77,10 +79,18 @@ Custumer.surname.toUpperCase() // chama o método em custumer.surname
 
 console.log(F().M())
 
-// Os métodos e a palavra-chave this são fundamentais para o paradigma da programação orietada a objeto. 
+// Os métodos e a palavra-chave this são fundamentais para o paradigma da programação orietada a objetos. Qualquer função que seja utilizada como método recebe um argumento inplícido - o obejeto por meio do qual ela é chamada. Normalmente, um método efetua algum tipo de operação nesse objeto e asintaxe de chamada de método é uma maneira elegante de expressar o fato de que uma função está operando em um objeto. Compare as duas linhas a seguir
 
 
 rect.setSise(width, height);
 setRectSise(rect,width,height);
 
 // As funções hipoteticas chamadas nessas duas linhas de código podem efetuar exatamente a mesma operação no objeto (hipotetico) rect, mas a sintaxe da chamada de métodos na primeira linha transmite mais claramente a ideia de que o foco principal da operação é o objeto rect
+
+// encadeamento de métodos
+// 164 do livro
+// Quando métodos retornam objetos pode-se usar o valor de retorno de uma chamada de método como parte de uma chamada subsequente. Isso resulta em uma serie ("encadeamento" ou "cascata") de chamada de métodos como  uma única expressão. ao trabalhar com a biblioteca de JQuerY e comum escrever um codígo assim
+
+// localiza todos os cabeçalho, mapeia para suas identificações, converte em um Array e os classifica
+$(":header").map(function(){return this.id }).get().sort();
+

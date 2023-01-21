@@ -1,25 +1,25 @@
-
+// pagina 144 
  // inicializa o array 
-// for(var linhas = 0; linhas < tabela.length; linhas++) {
-//     for(colunas = 0; colunas[linhas].length; colunas++) {
-//         tabela[linhas][colunas] = linhas*colunas
+for(var linhas = 0; linhas < tabela.length; linhas++) {
+    for(colunas = 0; colunas[linhas].length; colunas++) {
+        tabela[linhas][colunas] = linhas*colunas
+    }
+    }
+// para acesar um valor em um array de arrays 
 
-//     }
-// }// para acesar um valor em um array de arrays 
+// pra criar um array multidimensionais
 
-// // pra criar um array multidimensionais
-
-// var tabela = new Array(10); // 10 linhas da tabuada
-// for(var i = 0; i < tabela.length; i++) {
-//     for(coluna = 0; coluna < tabela[i].length; coluna++) {
-//         tabela[i][coluna] = i*coluna; //cada linha tem 10 colunas
-//     }
-// }
+var tabela = new Array(10); // 10 linhas da tabuada
+for(var i = 0; i < tabela.length; i++) {
+    for(coluna = 0; coluna < tabela[i].length; coluna++) {
+        tabela[i][coluna] = i*coluna; //cada linha tem 10 colunas
+    }
+}
 
 
 
 // metodos de array 
-
+// pagina 145
 // metodo join 
 // Esse metodo ele comcatena todos os elementos de um array em string a primeiro a.join(" ") ele provoca um espaço entre as strings o a.join() ele mantem as virgulas a.join("") não há espaço entre as strings é o b.join('-') ele poin traços em quase todo comprimento do array
 
@@ -67,6 +67,7 @@ d.sort(function(g,p){
 console.log(d);
 
 // metodo concat()
+// pagina 146
 //  ele cria é retorna um novo array contendo os elementos do array original em que concat() foi chamado, seguido de cada  um dos argumentos de concat(). Se qualquer argumento é um array então são os elementos do array que são concatenados é não o array em sí. Concat() não comcatena array em arrays ele não modifica o array que ele é chamado 
 
 var y = [1,2,3,];

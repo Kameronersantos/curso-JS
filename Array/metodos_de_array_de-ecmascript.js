@@ -1,4 +1,5 @@
 // metodo forEach()
+// pagina 149
 // o forEach() ele chama uma função pra trabalhar com o array nesta função pode usar três argumantos no maximo o primeiro sé refere ao valor do elemento o outro ao índice do array é o terceiro o array em sí mas pode também trabalhar com só o argumento do valor do array 
 var dias = ["oi"]
 
@@ -22,6 +23,7 @@ function foreach(v,i,a) {
 foreach.break = new Error("pare a interação")
 
 // metodo map
+// pagina 150
 // esse metodo ele passa cada elemento do array em que é chamado para funçao especificada e retorna um array contendo os valores retornados por essa função e ele retorna um novo array
 var a = [1,2,3];
 var b = a.map(function(x){return x+x});
@@ -56,6 +58,7 @@ console.log(jh.some(isNaN))// aqui mostra se o array tem um não numero como exm
 // every retorna true e some retorna false qundo os array estão vazios 
 
 // metodos reduce(), reduceRight()
+// pagina 151 a 152
 // eles combinam os elementos de um array usando a função especificada para produzir um valor único 
 // Essa operação comum na programação funcional também é conhecida pelos nomes injetar e dobrar. Exemplos ajudam a ilustrar como isso funciona
 
@@ -104,7 +107,7 @@ console.log(rightunion)
 
 
 //  metodo indexOf() e lastindexOf()
-
+// pagina 153
 // Eles procuram um elemento com o valor especificado com valor em um array e retorna o índice do primeiro elemento encontrado com esse valor ou caso não ha nenhum valor correspondente retorna -1
 var g = [0,1,2,1,0];
 console.log(g.indexOf(1)); // ele localiza o valor 1 da esquerda pra direita 

@@ -1,3 +1,5 @@
+// capitulo 7.10 pagina 153 a 154
+
 var an = [2,3,4,5,6];
 var on = {x:3,y:7,o:[5]};
 var a = [];
@@ -12,6 +14,7 @@ var isArray = Function.isArray || function(o){
 // essa função é mesma coisa que função Array.isArray faz só que no ECMAscript 3 
 
 // Objetos semelhantes a um array
+// pagina 154 a 155
  
 // Como vimos, os arrays em JavaScript têm algumas carcterísticas especias inexistentes em outros objetos
 // A propriedade length é atualizada automaticamente quando novos elementos são adicionados  na lista.
@@ -54,6 +57,8 @@ function isArrayLike(o) {
 // Determina o é um objeto  semelhante a um  array. 
 // String e funções tem propriedades length nomericas , mas são excluidas pelo teste de typeof. 
 // Em javaScript do lado cliente , os nós de texto dom tem uma propriedade length numérica e talvez precisem ser escluídos com um teste o.nodeType != 3 adicional.
+
+// pagina 156 a 157
 
 var c = {"0": "a", "1":"b","2":"c", length:3}; // objeto semelhante a um array 
 Array.prototype.join.call(c,"+");  // "a+b+c"

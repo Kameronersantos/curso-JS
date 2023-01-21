@@ -1,3 +1,5 @@
+
+// capitulo 8.1 pagina 159
 function impremir_propredades(){
     for(var p in o) {
         console.log(p + ":" + o[p] + "/n");

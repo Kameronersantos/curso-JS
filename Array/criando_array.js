@@ -1,3 +1,5 @@
+// capitulo 7  Arrays pagina 137
+
 var vazio = [];
 var primos = [2,3,5,7,11];
 var misto = [1.1, "true", "a"];

@@ -77,6 +77,7 @@ console.log(y.concat(4,[5,6]))
 console.log(y.concat(4,[5,[6,7]]));
 
 // metodo slice()
+// pagina 146
 // slice ele retorna um pedaço do array especificado. o seus dois argumentos são o inicio é o fim do trecho que vc quer pegar do array. O array retornado contém o elemento especificado pelo primeiro argumento e todos os elementos subsequentes mas não incluindo o elemento especificado no segundo argumento. É se o segundo não existe ele contém todos os elementos desde posicão inicial até o fim no caso 
 var t = [1,2,3,4,5,6,7,8,9];
 console.log(t.slice(1,9));
@@ -108,6 +109,7 @@ comprimento.push([4,5])
 console.log(comprimento)
 
 // metodo unshift e shift
+// pagina 148
 // é mesma coisa que pop é push ´só que acresenta e exclui elementos no inicio do array 
 var s = [];
 s.unshift(1);

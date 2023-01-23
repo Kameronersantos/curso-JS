@@ -94,3 +94,27 @@ setRectSise(rect,width,height);
 // localiza todos os cabeçalho, mapeia para suas identificações, converte em um Array e os classifica
 $(":header").map(function(){return this.id }).get().sort();
 
+// quando você escrever um método que não tem o seu proprío valor de retorno, pense em faze-lo retornar this
+
+shape.setX(100).setY(100).setSise(50).setOutline("red").sefFill("blue").draw()
+
+// Nesse exemplo de cima o objeto e nomeado uma vez e varios métodos foi chamado a patir dele 
+
+// this é uma palavra chave e não uma variável ou nome de propiedade. A sistaxe de javaScript não permite atribuir valor a this
+
+// Ao contrario das variáveis a palavra-chave this não tem escopo e as funções alinhada não herdam o valor de this de suas chamadoras.
+
+var obj = {
+   met: function() {
+        var self = this;
+        console.log(this === 0);
+        fun();
+        function fun(){
+            console.log(this === 0);
+            console.log(self === 0);
+        }
+    }
+};
+obj.met
+
+

@@ -1,3 +1,4 @@
+// pagina 140
 var es = new Array(5);
 
 console.log(es.length)
@@ -22,6 +23,7 @@ console.log(es)
 console.log(es[3])
 
 // caso vc tenta ler o indíce sem elemento mostra underfined
+// pagina 141
 
 a = [1,2,3,4,5];
 console.log(a.length = 9)
@@ -49,6 +51,7 @@ b[2] = 9
 console.log(b)
 
 // adicionando e excluido elementos de array
+
 
 a = [];
 a[0] = "zero";
@@ -87,6 +90,7 @@ console.log(f.length)
 // O pop ele exclui o ultimo elemento do array, e o shift ele exclui o primeiro elemento do array. Eles também diminue o comprimento do array. Eles desloca  todos os elementos para o indíce menor do que o o indice inicial.
 
 // Interação em array
+// pagina 142
 
 
     valor[i] = o[chave];  // armazena o valor no array valorvar chaves = Object.keys(o); // Obtém um array de nomes de propridades do objeto "o"

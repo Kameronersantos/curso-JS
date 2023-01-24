@@ -104,17 +104,28 @@ shape.setX(100).setY(100).setSise(50).setOutline("red").sefFill("blue").draw()
 
 // Ao contrario das variáveis a palavra-chave this não tem escopo e as funções alinhada não herdam o valor de this de suas chamadoras.
 
-var obj = {
-   met: function() {
-        var self = this;
-        console.log(this === 0);
-        fun();
-        function fun(){
-            console.log(this === 0);
-            console.log(self === 0);
+var obj = {   // um objeto obj
+   met: function() {   // método met do objeto.
+        var self = this;  // salva o valor this na variável
+        console.log(this === 0);  // inprime "true": this é o objeto
+        fun();   // agora chama a função auxiliar fum()
+        function fun(){     // uma função alinhada fum
+            console.log(this === 0); // "false" this é global ou undefined
+            console.log(self === 0); // self é o valor do this externo
         }
     }
 };
-obj.met
+obj.met   // chama o método met no obj
+
+// chamada de construtora 
+// pagina 165
+
+// se uma chamada de função ou de método é procedida pela palavra-chave new, então ela é uma chamada de construtora.
+
+var objt = new Object();
+var obje = new Object;
+
+// chamada indireta 
+// Em JavaScript as funções são como objetos e como todos objeto em JavaScript, elas têm métodos dois desses métodos são, call() e apply(), chamam a função indiretamente. Os dois métodos permitem explicar explicitamente o valor de this para chamada, ou seja realmente um método desse objeto, mesmo que não seja é possivel chamar qualquer função como métodos de qualquer objeto mesmo que não seja realmente um método desse objeto. Os dois métodos também permitem especificar os argumentos da chamada. O método call() utiliza sua propria lista de argumento como argumentos para função eo método apply() espera que um array de valores seja usado como argumento. Os métodos call() eapply() estão descritos em detalhes na Secão 8.7.3
 
 

@@ -17,8 +17,24 @@ getpropertyNames(p,a); // anexa as propriedades de p nesse array
 
 // Lista de argumento de comprimento variavel: o objeto arguments
 // pagina 166
+
+// O objeto Argumento é util de várias maneiras. O exemplo a  seguir mostra como é possivel utiliza-lo para verificar se uma função é chamada com o número de argumentos esperado, pois javaScript não faz isso automaticamente
+
 function f(x,y,z) {
     if(arguments.length != 3) {
         throw new Error("função f chamada com " + arguments.length +"arguments,mas isso executa 3 argumentos");
     }
+    // agora executa a função real
 }
+
+// Note que muitas vezes é desnecesário verifica o número de argumentos assim. O comportamento padrão de JvaScript é satisfatório na maiorias dos casos: os argumentos ausentes são underfined e os argumentos extras são simplesmento ignorados.
+
+function max(/*......*/) {
+    var max = Number.NEGATIVE_INFINITY;
+    // Itera através de argumentos, procurando (e lembrando ) o maior.
+    for(var i = 0; i <arguments.length; i++)
+    if(arguments[i] > max) max = arguments[i];
+    // Retorna o maior
+    return max
+}
+var largest = max(1,10,100,2,3,1000,4,5,10000,6); //=>10000

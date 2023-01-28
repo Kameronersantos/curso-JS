@@ -38,3 +38,23 @@ function max(/*......*/) {
     return max
 }
 var largest = max(1,10,100,2,3,1000,4,5,10000,6); //=>10000
+console.log(largest)
+
+// pagina 168
+
+// funções como essa pode aceitar qualquer numero de argumento é são chamadas de funções varangs
+
+
+// funções varangs não precisam permitir chamadas com zero argumentos. É perfeitamente razoável usar o objeto arguments[] para escrever que esperam um número fixo de argumentos nomeados é obrigatorios, seguindo de um número arbitrário de argumentos opcionais não nomeados
+
+// lembre-se que arguments[] não é um array, é um objeto Arguments.
+
+function mudar(x){
+    console.log(x); 
+    arguments[0] = null
+    console.log();
+}
+
+// Quando vc tem um parâmetro na função é vc usa o objeto arguments[] o valor dentro dele vai ser o valor do parâmetro é muda-lo também vai mudar o valor do parâmetro
+
+// Esse comportamento não tem no modo restrito "use Strict"

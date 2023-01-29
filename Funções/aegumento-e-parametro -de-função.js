@@ -94,4 +94,43 @@ var a = [1,2,3,4], b = [];
 easycopy({from: a, to: b, length: 4});
 
 // tipos de argumentos 
+// pagina 170
 // o JavaScript faz comversão de tipo de forma livre todos os tipos podem ser comvertidos para string quando a fumção tentar utilizar como string para isso tem o método to string 
+// Mas isso nem sempre acontece quando o 1 argumento espera um array qualquer outro argumento que não seja um array (ou um objeto parecido com array ) vai falhar.
+// A não ser que vc escreva uma função descatavel que chamara 1 ou 2 vezes para testar se da erro
+
+function somar(a) {
+    if(isArrayLike(a)) {
+        var total = 0
+        for(var i = 0; i < a.length; i++){
+            var elemento = a[i];
+            if(elemento == null) continue;
+            if(isFinite(elemento)) total += elemento;
+            else throw new Error("soma(): elementos deve ser um numero infinito");
+
+        }
+        return total
+    }
+        
+    else throw new Error("soma():argument deve ser parecido com array")
+};
+
+// JavaScript é uma linguagem muito flexivel e pouco tipada, e as vezes é apropriado escrever funções flexíveis quanto ao número e ao tipo de argumento que recebem. 
+function flexivel(a){
+    var total = 0;
+    for(var i = 0; i < a.length; i++){
+        var elemento = a[i];
+        if(elemento == null) continue;
+        if(isArray(elemento)){
+            n = flexivel.apply(this,elemento);
+        } else if (typeof elemento === "function"){
+            n = Number(elemento())
+        } else n = Number(elemento);
+            
+        if(isNaN(n)) throw Error("flexivel(): não consegue converter " + elemento + "para numero");
+        total += n
+    }
+    return total
+};
+
+// O método flexivel() em cima adota essa estrategia (provavelmente ao extremo). Por exemplo ele aceita qualquer número de argumentos mas processa recursivamente

@@ -3,7 +3,9 @@
 
 // parâmetro opicionais
 
-// anexa os nomes das propriedades enumeravais do objeto o
+
+
+// anexa  nomes das propriedades enumeravais do objeto o
 // array a e retorna a. Se o for omitido cria  e retorna um novo array.
 function getpropertyNames(o ,/*opcional*/a){
     if(a === undefined) a == []; // se for undefined usa um novo array em a
@@ -11,6 +13,7 @@ function getpropertyNames(o ,/*opcional*/a){
     return a
 
 }
+var o = {p:2};
 // Essa função pode ser chamada com 1 ou 2 argumentos
 var a = getpropertyNames(o);  // obtêm as propridades de o em um novo array
 getpropertyNames(p,a); // anexa as propriedades de p nesse array
@@ -58,3 +61,37 @@ function mudar(x){
 // Quando vc tem um parâmetro na função é vc usa o objeto arguments[] o valor dentro dele vai ser o valor do parâmetro é muda-lo também vai mudar o valor do parâmetro
 
 // Esse comportamento não tem no modo restrito "use Strict"
+
+// As propiedades callee e caller
+// pagina 168
+
+var factorial = function(x) {
+    if(x <= 1) return 1;
+    return x * arguments.callee(x-1)
+
+};
+//  objeto arguments[] define as propriedades callee e caller no modo restrito elas dão TypeErro  se tentar ler ou gravar-las. Fora dso modo restrito a propriedade callee se refere a função que está sendo executada no momento. caller é uma propriedade que dá acesso à pilha de chamada é também se refere à função que chamou aquela. E ocasionalmente a propriedade callee é útil para permitir que funções não nomeadas chamam a sí mesmas recursivamente
+
+// Usando propriedades de objeto como argumentos 
+// pagina 169 
+// quando uma função tem mais de três parâmetros, torna-se difícil para o programador que a chama lembrar-se da ordem correta em que deve passar argumentos. Para que o programador não precise consultar a ducomentação cada vez que utilizar para função, pode ser apropriado permitir que os argumentos sejam passados em pares nome/valor em qualquer ordem. Pra imprementar esse estilo de chamada de método, defina a sua função de modo esperar um único objeto como argumento e faça os usuario da fumção passarem o objeto que defina os pares nomes/ valor exigidos. O código função especifique padrões para argumentos omitidos:
+function arraycopia(/*array*/from, /* índice */ from_start,/* array*/ to, /* índice */ to_start,/*integrar*/ length) {
+    
+}
+// copie os length elements do array from para to 
+// começa a copia com elemento from_start no array from
+// e copie  esse elemento em to_start no array to 
+
+function easycopy(args){
+    arraycopia(args.from, 
+        args.from_start || 0, // obeserve o valor padrão fornecido 
+         args.to,  
+        args.to_start || 0,
+        args.length);
+}
+// Aqui está como easycopy() poderia ser chamada
+var a = [1,2,3,4], b = [];
+easycopy({from: a, to: b, length: 4});
+
+// tipos de argumentos 
+// o JavaScript faz comversão de tipo de forma livre todos os tipos podem ser comvertidos para string quando a fumção tentar utilizar como string para isso tem o método to string 

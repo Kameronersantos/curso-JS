@@ -1,0 +1,5 @@
+persaInt -> adapta para numero inteiro
+persaFloot -> adapta para numero de casas decimais
+alert -> manda uma mensagem pro usuario
+confirm -> manda o úsuario comfirmar algo ou não
+prompt -> Pede ao úsuario a escrever algo

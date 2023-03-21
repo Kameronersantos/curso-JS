@@ -30,3 +30,15 @@ console.log(a.slice(0 -2)); // fatio com numeros negativos é pego os dois últi
 // para saber sé vc está trabalhando com array
 console.log(a instanceof Array);
 
+// um valor de const é mutável apenas como Array ou Objeto
+// como variavel essa mudança de valor não se aplica
+
+// ISSO PODE 
+const array = [1, 2, 3, 4, 5];
+array.pop();
+array[0] = 1024;
+console.log(array); // [ 1024, 2, 3, 4 ]
+
+// ISSO NÃO PODE
+const array = [1, 2, 3, 4, 5];
+array = 'Legal';

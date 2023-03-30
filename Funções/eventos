@@ -1,0 +1,14 @@
+ onsubmit -> O evento onsubmit ocorre quando um formulário é enviado.
+ 
+ onabort -> O evento ocorre quando o carregamento de um áudio ou vídeo é abortado, é támbem o ocorre quando um download é interrompido, não quando ocorre um erro.
+
+ onbeforeprint -> 0 evento ocorre quando uma página está prestes a ser impressa, é támbem ocorre antes que a caixa de diálogo de impressão seja aberta
+
+ onafterprint -> O evento ocorre quando uma página começa a ser impressa, é támbem o ocorre quando a caixa de diálogo de impressão é fechada.
+
+
+ animationstart -> O evento ocorre quando uma animação CSS é iniciada.
+
+ animationend -> O evento ocorre quando uma animação CSS é concluída 
+
+ animationiteration -> O evento ocorre quando uma animação CSS é repetida

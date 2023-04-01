@@ -48,7 +48,7 @@ console.log(expressãoAnd);
 // vai parar é retornar o valor falso "é o valor mesmo"
 // se caso ele avalia todas as expressões é não acha uma falsa 
 // ele vai mostra sempre a última 
-// && -> false && true  
+// && -> false && true  -> false "o valor mesmo"
 console.log('Luiz Atonio' && true && 'Maria')
 /** valores falsos 
  *  false == falso
@@ -65,6 +65,27 @@ function oi(){
 const vai_executar = 'joaozinho';
 
 console.log(vai_executar &&  oi());
+
+// || -> true || false -> vai retornar "o valor verdadeiro"
+
+console.log(0 || false || null || 'luis Augusto' || true) 
+
+// por que ele exibiu 'luis Augusto' pq o OR(||) precisa de apenas uma
+// expressão verdadeira para que ele retorne o valor verdadeiro
+// ele retorna o primeiro valor verdadeiro que o JavaScript encontrou
+
+const corU = null; // pelo fato de um elemento falso ele não sera selecionado
+const corUsuario = 'vermelho' // mas quando é um elemento verdadeiro ele será selecionado por primeiro
+const corPadrão = corUsuario || 'preto'
+console.log(corPadrão)
+
+const a = 0
+const b = false
+const c = false
+const d = null
+const e = NaN
+console.log(a || b || c || d || e)
+// se tudo for false, é o último elemento que será mostrado
 // Operador !
 
 const algo_de_errado = true;

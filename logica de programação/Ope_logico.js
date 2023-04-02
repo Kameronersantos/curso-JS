@@ -86,6 +86,7 @@ const d = null
 const e = NaN
 console.log(a || b || c || d || e)
 // se tudo for false, é o último elemento que será mostrado
+
 // Operador !
 
 const algo_de_errado = true;

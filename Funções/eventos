@@ -1,14 +1,37 @@
- onsubmit -> O evento onsubmit ocorre quando um formulário é enviado.
- 
+                    Eventos de Mídia
+
  onabort -> O evento ocorre quando o carregamento de um áudio ou vídeo é abortado, é támbem o ocorre quando um download é interrompido, não quando ocorre um erro.
+
+ oncanplay -> evento ocorre quando o navegador pode começar a reproduzir uma mídia, também evento ocorre quando o navegador tem buffer suficiente para começar.
+
+ oncanplaythrough -> evento ocorre quando o navegador estima que pode reproduzir uma mídia sem precisar parar para armazenar em buffer. Chame uma função quando um vídeo puder ser reproduzido até o fim, sem parar:
+
+                   Carregamento de pagína
 
  onbeforeprint -> 0 evento ocorre quando uma página está prestes a ser impressa, é támbem ocorre antes que a caixa de diálogo de impressão seja aberta
 
  onafterprint -> O evento ocorre quando uma página começa a ser impressa, é támbem o ocorre quando a caixa de diálogo de impressão é fechada.
 
+ onbeforeunload -> evento ocorre quando um documento está prestes a ser descarregado, Este evento permite exibir uma mensagem em uma caixa de diálogo de confirmação para informar ao usuário se deseja permanecer ou sair da página atual, A mensagem padrão que aparece na caixa de confirmação é diferente em diferentes navegadores. No entanto, a mensagem padrão é algo como "Tem certeza de que deseja sair desta página?", Esta mensagem não pode ser removida, a menos que você chame preventDefault() no evento.
+
+                    Animação em CSS
 
  animationstart -> O evento ocorre quando uma animação CSS é iniciada.
 
  animationend -> O evento ocorre quando uma animação CSS é concluída 
 
  animationiteration -> O evento ocorre quando uma animação CSS é repetida
+
+                    Eventos de formulario
+
+ onsubmit -> O evento onsubmit ocorre quando um formulário é enviado.
+ 
+ onblur -> evento ocorre quando um elemento HTML perde o foco,
+ támbem evento é frequentemente usado em campos de entrada,
+ evento é frequentemente usado com validação de formulário (quando o usuário sai de um campo de formulário).
+
+ onchange -> evento ocorre quando o valor de um elemento HTML é alterado, Dica: Este evento é semelhante ao evento oninput . A diferença é que o evento oninput ocorre imediatamente após a alteração do valor de um elemento, enquanto onchange ocorre quando o elemento perde o foco, após a alteração do conteúdo. A outra diferença é que o evento onchange também funciona em elementos <select>.
+
+ onclick -> Chame uma função quando um botão é clicado: evento ocorre quando o usuário clica em um elemento HTML.
+
+ oncontextmenu -> Exemplo:(Impedir que o menu de contexto mostre:) evento ocorre quando o usuário clica com o botão direito do mouse em um elemento HTML para abrir o menu de contexto.

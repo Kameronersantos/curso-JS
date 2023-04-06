@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ :root{
+   --primeira-cor: rgb(59, 250, 231);
+   --segunda-cor: rgb(22, 145, 22);
+   --Opens_sans: font-family: 'Open Sans', sans-serif;
+  }
+ 
+ *{
+
+
+box-sizing: border-box;
+ }
+ 
+ body {
+   margin: 0px;
+   padding: 0px;
+   background-color:var(--primeira-cor);
+   font-family: var(--Opens_sans); /*A familha da fonte*/
+    font-size: 1.3em; /*O tamanho da fonte*/
+    line-height: 1.4em; /* O espaçamento da linha*/
+ }
+
+ .container{
+   max-width: 650px; /*A largura maxima do bloco*/
+   margin: 20px auto; /*O espaçamento fora do bloco*/
+    background-color: #fff;/* A cor de fundo do bloco*/
+    padding: 20px; /*O espaçamento dentro do bloco*/
+    text-align: left; /* O alinhamento do texto*/
+    border-radius: 15px;
+ }
+ 
+form input , form label , form button{  /* da para escolher varios elementos dentro de um parâmetro*/
+  display: block; /*Aqui comfigura sé é o elemento é bloco ou ele fica na mesma linha*/
+  width: 100%; /* A porcentagen da largura de um elemento*/
+  margin-bottom: 10px; /*O espaçamento de cima (fora do bloco*/
+}
+form input {
+  font-size: 20px;
+  height: 50px;
+  padding: 0px 20px;
+  
+}
+form input:focus {
+  outline: 1px solid red;
+}
+form button{
+  border: none;
+  background-color: var(--primeira-cor);
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 0px;
+  font-weight: bold;
+  cursor: pointer; /*Ativa o cursor*/
+}
+ul li {
+  list-style-type: none;
+}
+.titulo1{
+  font-weight: 900;
+  font-size: 1.4em;
+}
+
+form button:hover { /*No hover tudo que tiver nele vai acontecer quando passar o mouse*/
+  background-color: var(--segunda-cor);
+}
+form button:focus { /*No focus tudo que tiver nele vai acontecer quando clicar*/
+  background-color:aqua;
+}
+

@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
  :root{
    --primeira-cor: rgb(59, 250, 231);
    --segunda-cor: rgb(22, 145, 22);
    --Opens_sans: font-family: 'Open Sans', sans-serif;
+   --roboto: font-family: 'Roboto', sans-serif;
   }
  
  *{
@@ -54,10 +56,17 @@ form button{
 }
 ul li {
   list-style-type: none;
+ font-family: var(--roboto);
+ font-family: 'Roboto', sans-serif;
+}
+ul{
+  columns: 2;
 }
 .titulo1{
   font-weight: 900;
-  font-size: 1.4em;
+  font-size: 1.2em;
+  margin: 2px 0px 20px;
+  font-family: var(--Opens_sans);
 }
 
 form button:hover { /*No hover tudo que tiver nele vai acontecer quando passar o mouse*/
@@ -65,5 +74,14 @@ form button:hover { /*No hover tudo que tiver nele vai acontecer quando passar o
 }
 form button:focus { /*No focus tudo que tiver nele vai acontecer quando clicar*/
   background-color:aqua;
+}
+
+.paragrafo-resultado{
+  background-color: green;
+  padding: 10px 20px;
+}
+.bad {
+background-color: red;
+padding: 10px 20px ;
 }
 

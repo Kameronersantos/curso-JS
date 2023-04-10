@@ -5,55 +5,61 @@
     <meta charset="UTF-8">
     <meta
         http-equiv="X-UA-Compatible"
-        content="IE=edge"
-    >
+        content="IE=edge">
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        content="width=device-width, initial-scale=1.0">
     <link
         rel="stylesheet"
-        href="estilo.css"
-    >
-    <title>modelo</title>
-</head>
+        href="estilo.css">
 
+<title>modelo</title>
+</head>
+<!-- deixe o type="text" caso vc for mudar ele manualmente por exemplo:
+ const peso = document.querySelector(.peso)   
+ const p = Number(peso.value)
+
+ no caso de deixar o type="number" 
+const altura = document.querySelector(.altura)   
+const a = Number(altura)            -->
 <body>
-    <section class="container">
+<section class="container">
         <ul id="lista">
             <li class="titulo1">IMC</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Menos do que 18,5</li>
+            <li>Entre 18,5 e 24,9</li>
+            <li>Entre 25 e 29,9</li>
+            <li>Entre 30 e 34,9</li>
+            <li>Entre 35 e 39,9</li>
+            <li>Mais do que 40</li>
             <li class="titulo1">Resultado</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>A baixo do Peso</li>
+            <li>Peso normal</li>
+            <li>Sobrepeso</li>
+            <li>Obesidade grau 1</li>
+            <li>Obesidade grau 2</li>
+            <li>Obesidade grau 3</li>
         </ul>
 
-       
+       <h1>Calcule seu IMC</h1>
 
-        <form action="">
+        <form class="form" action="/" method="post">
             <label for="pes">Peso</label>
             <input
-                type="number"
-                id="peso"
+                type="text"
+                class="peso"
+    
             > 
             <label for="alt">Altura</label>
             <input
-                type="number"
-                id="altura"
+                type="text"
+                class="altura"
             >
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
         </form>
-    </section>
-    <script src="javas.js"></script>
+        <div id="calculo"></div>
+</section>
+    <script src="java2.js"></script>
 </body>
 
 </html>

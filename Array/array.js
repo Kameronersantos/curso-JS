@@ -42,3 +42,30 @@ console.log(array); // [ 1024, 2, 3, 4 ]
 // ISSO NÃO PODE
 const array = [1, 2, 3, 4, 5];
 array = 'Legal';
+
+
+// exercicío
+
+var numero = 1;
+var array = [3,4,5,6,7,8];
+console.log(array.slice(1,6))
+
+
+function factorial(a,ini,ifin){
+   if( a.length < 0) throw new Error('array não pode ter nada ');
+   var ini = array.slice(0,1);
+   var ifin = array.slice(4,5);
+   
+   for(var inicio = ini; ini < ifin; );
+ 
+ 
+
+}
+console.log(factorial(array,array[0],array[5]))
+
+
+var somar = function(a) {
+    if(a === undefined) return new Error;
+
+   return a + a
+}

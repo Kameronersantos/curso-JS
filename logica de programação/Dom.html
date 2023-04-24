@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document Objeto model</title>
+</head>
+<body>
+    <section class="pegar"></section>
+    <script>
+  window // o window é o topo da cadeia do javaScript 
+  window.document // aqui vc tem o documento html que também é o topo do Dom é document é filho do Window
+//   document.Html // O html também é filho do document
+//   document.head // o corpo(body) é cabeça(head) 
+//   document.body // são filhos do Html
+//   body.section // section é filho de body
+//   section.h1 // h1 é filho de section
+//   h1.textNode // o texto dentro do h1 é filho do mesmo
+ const section1 = document.querySelector('.pegar');
+//   só por meio do (document) que elementos como: div,h1,p,section,main,a,form,footer,header etc.. são criados
+let elemento = document.createElement('div') // só fazer isso o elemento não se torna filho de document ou pai de outro elemento
+
+section1.appendChild(elemento) // Usando o (appendChild) que o elemento
+// que vc criou se torna um filho do document
+elemento.innerHTML = 'oi' // aqui nesse caso o elemento div gerou um filho que o textNode
+
+//  dom se refere ao navegador é uma interface de objetos que me permitem manipular dentro da pagina
+     </script>
+</body>
+</html>

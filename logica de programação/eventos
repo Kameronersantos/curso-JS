@@ -1,0 +1,111 @@
+                    Eventos de Mídia
+
+ onabort -> O evento ocorre quando o carregamento de um áudio ou vídeo é abortado, é támbem o ocorre quando um download é interrompido, não quando ocorre um erro.
+
+ oncanplay -> evento ocorre quando o navegador pode começar a reproduzir uma mídia, também evento ocorre quando o navegador tem buffer suficiente para começar.
+
+ oncanplaythrough -> evento ocorre quando o navegador estima que pode reproduzir uma mídia sem precisar parar para armazenar em buffer. Chame uma função quando um vídeo puder ser reproduzido até o fim, sem parar:
+
+ ondurationchange -> Chame uma função quando a duração de um vídeo for alterada: evento ocorre quando a duração de uma mídia é alterada .
+ Quando um áudio ou vídeo é carregado, a duração muda de "NaN" para uma duração real.
+
+ onended -> Chame uma função quando um áudio terminar: evento ocorre quando um áudio/vídeo chega ao fim é também evento é útil para mensagens como "obrigado por ouvir".
+
+ onerror -> Execute um JavaScript se ocorrer um erro ao carregar uma imagem: O evento onerror é acionado se ocorrer um erro durante o carregamento de um arquivo externo (por exemplo, um documento ou uma imagem).
+ Dica: Quando utilizado em mídia de áudio/vídeo, os eventos relacionados que ocorrem quando há algum tipo de distúrbio no processo de carregamento da mídia são: abortar, um esvaziado, instalado, suspender
+
+
+                   Carregamento de pagína
+
+ onbeforeprint -> 0 evento ocorre quando uma página está prestes a ser impressa, é támbem ocorre antes que a caixa de diálogo de impressão seja aberta
+
+ onafterprint -> O evento ocorre quando uma página começa a ser impressa, é támbem o ocorre quando a caixa de diálogo de impressão é fechada.
+
+ onbeforeunload -> evento ocorre quando um documento está prestes a ser descarregado, Este evento permite exibir uma mensagem em uma caixa de diálogo de confirmação para informar ao usuário se deseja permanecer ou sair da página atual, A mensagem padrão que aparece na caixa de confirmação é diferente em diferentes navegadores. No entanto, a mensagem padrão é algo como "Tem certeza de que deseja sair desta página?", Esta mensagem não pode ser removida, a menos que você chame preventDefault() no evento.
+
+                    Animação em CSS
+
+ animationstart -> O evento ocorre quando uma animação CSS é iniciada.
+
+ animationend -> O evento ocorre quando uma animação CSS é concluída 
+
+ animationiteration -> O evento ocorre quando uma animação CSS é repetida
+
+                    Eventos de formulario
+
+ onsubmit -> O evento onsubmit ocorre quando um formulário é enviado.
+ 
+ onblur -> evento ocorre quando um elemento HTML perde o foco,
+ támbem evento é frequentemente usado em campos de entrada,
+ evento é frequentemente usado com validação de formulário (quando o usuário sai de um campo de formulário).
+
+ onchange -> evento ocorre quando o valor de um elemento HTML é alterado, Dica: Este evento é semelhante ao evento oninput . A diferença é que o evento oninput ocorre imediatamente após a alteração do valor de um elemento, enquanto onchange ocorre quando o elemento perde o foco, após a alteração do conteúdo. A outra diferença é que o evento onchange também funciona em elementos <select>.
+
+ oninput -> Chame uma função quando um usuário escreve algo em um campo <input>:evento ocorre quando um elemento obtém entrada e também evento ocorre quando o valor de um elemento <input> ou <textarea> é alterado. evento NÃO ocorre quando um elemento <select> muda.
+
+ O oninput evento é semelhante ao onchange evento.
+ A diferença é que o oninputevento ocorre imediatamente após a alteração do conteúdo, enquanto onchangeocorre quando o elemento perde o foco.
+
+ onfocus -> Chame uma função quando um campo de entrada recebe o foco: evento ocorre quando um elemento recebe o foco e também evento é frequentemente usado em campos de entrada.
+
+ onfosim -> Chame uma função quando um campo de entrada estiver prestes a obter o foco:evento ocorre quando um elemento recebe o foco. e também evento é frequentemente usado em campos de entrada.
+
+ onfocusout -> Chame uma função quando um campo de entrada está prestes a perder o foco: evento ocorre quando um elemento perde o foco e também evento é frequentemente usado em campos de entrada. evento é frequentemente usado com validação de formulário (quando o usuário sai de um campo de formulário).
+
+                    Eventos de interação do usuário
+
+ onclick -> Chame uma função quando um botão é clicado: evento ocorre quando o usuário clica em um elemento HTML.
+
+ oncontextmenu -> Exemplo:(Impedir que o menu de contexto mostre:) evento ocorre quando o usuário clica com o botão direito do mouse em um elemento HTML para abrir o menu de contexto.
+
+ oncopy -> Chame uma função ao copiar algum texto de um elemento <input>: evento ocorre quando o usuário inicia um processo de cópia no navegador 
+ também o evento ocorre quando o usuário copia o conteúdo do elemento (como uma cópia de texto) 
+ evento também ocorre quando o usuário copia um elemento inteiro (como uma imagem).
+
+ oncut -> Chame uma função ao cortar algum texto em um elemento: evento ocorre quando o usuário corta o conteúdo de um elemento
+ também evento é usado principalmente em elementos <input> com type="text" Só é possível cortar algo de um campo de entrada.
+ Não é possível cortar o conteúdo de, por exemplo, um elemento <p>, A MENOS que o elemento tenha definido contenteditable como "true" (consulte "Mais exemplos" abaixo).
+
+ ondblclick -> Chame uma função quando um elemento <p> é clicado duas vezes: O ondblclick evento ocorre quando o usuário clica duas vezes em um elemento HTML.
+
+                    Eventos de arastar elementos
+
+ ondrag -> Chame uma função quando um elemento <p> estiver sendo arrastado:evento ocorre quando uma seleção está sendo arrastada.
+ Arrastar e soltar é um recurso comum em HTML. É quando você "agarra" um objeto e o arrasta para um local diferente.
+ Para tornar um elemento arrastável, use o Atributo arrastável.
+ Para obter mais informações, consulte o Tutorial de arrastar e soltar HTML.
+ Links e imagens são arrastáveis ​​por padrão e não precisam do atributo arrastável.
+ Muitos eventos ocorrem nos diferentes estágios de uma operação de arrastar e soltar(veja abaixo):
+
+ ondragend -> Chame uma função quando o usuário terminar de arrastar um elemento <p>: evento ocorre quando um usuário termina de arrastar uma seleção.
+
+ ondragenter -> Chame uma função quando um elemento arrastável entrar em um destino de soltar: evento ocorre quando uma seleção arrastável entra em um destino para soltar.
+
+ ondragleave -> Chame uma função quando um elemento arrastável for movido para fora de um destino de soltar: evento ocorre quando uma seleção arrastável sai de um destino de soltura.
+
+ Os eventos ondragentere ondragleave podem ajudar um usuário a entender melhor quando um arrastável está sobre o destino de soltar. Por exemplo, definindo uma cor de fundo quando um elemento arrastável entra no destino de soltar e removendo a cor quando o elemento é movido para fora do destino.
+
+ ondragover -> Chame uma função quando um elemento estiver sendo arrastado sobre um destino de soltar: evento ocorre quando uma seleção arrastável é arrastada sobre um destino. 
+ Por padrão, os dados/elementos não podem ser descartados em outros elementos. Para permitir uma queda, devemos impedir a manipulação padrão do elemento. Isso é feito chamando o método event.preventDefault() para o evento ondragover.
+
+ ondragstart -> Chame uma função quando o usuário começar a arrastar um elemento: evento ocorre quando o usuário começa a arrastar uma seleção.
+
+ ondrop -> Chame uma função quando um elemento arrastável for solto em um elemento <div>:evento ocorre quando uma seleção arrastável é solta em um destino.
+
+
+
+
+onfullscreenchange -> Exiba algum texto quando a página for visualizada no modo de tela cheia: ocorre quando um elemento é visualizado no modo de tela cheia.
+Observação: este evento requer prefixos específicos para funcionar em diferentes navegadores (consulte Suporte a navegadores abaixo).
+Dica: Use o método element .requestFullscreen() para visualizar um elemento no modo de tela cheia.
+Dica: Use o método element .exitFullscreen() para cancelar o modo de tela cheia.
+
+onfullscreenerror -> Alerte algum texto se um elemento não puder ser visualizado no modo de tela cheia: ocorre quando um elemento não pode ser visualizado em tela cheia, mesmo que tenha sido solicitado. 
+
+onhashchange -> Chame uma função quando a parte da âncora for alterada: ocorre quando houve alterações na parte âncora (começa com um símbolo '#') da URL atual.
+Um exemplo do que realmente é uma parte âncora: suponha que a URL atual seja
+http://www.example.com/test.htm#part2 - A parte âncora dessa URL seria #part2.
+Para invocar este evento, você pode:
+Altere a parte da âncora definindo a propriedade location.hash ou location.href do objeto Location
+Navegue até a página atual com um marcador diferente (use os botões "voltar" ou "avançar")
+Clique em um link para uma âncora de marcador

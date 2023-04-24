@@ -49,7 +49,7 @@ console.log(expressãoAnd);
 // se caso ele avalia todas as expressões é não acha uma falsa 
 // ele vai mostra sempre a última 
 // && -> false && true  -> false "o valor mesmo"
-console.log('Luiz Atonio' && true && 'Maria')
+console.log('Luiz Atonio' && true   && 'Maria')
 /** valores falsos 
  *  false == falso
  *  0 

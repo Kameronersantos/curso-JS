@@ -13,7 +13,7 @@ const nulo = null; // null -> tambem não a ponta pra nenhum local na memoria
 // quando vc quiser que um valor a ponte pra lugar nenhum vc utiliza null
 const boolean = true; // valor boolean só pode ter 2 valores true or false (valor lógico)
 
-console.log(typeof nulo,nulo) // O typeof pode ver o tipo de uma variavel exmplos: String, Number,Boolean, etc. É também se caso ponhar uma virgúla e depois repetir a variavel pode-se ver o valor dela.
+console.log(typeof nulo) // O typeof pode ver o tipo de uma variavel exmplos: String, Number,Boolean, etc. É também se caso ponhar uma virgúla e depois repetir a variavel pode-se ver o valor dela.
 let a = 3;
 let b = a;
 console.log(a,b);

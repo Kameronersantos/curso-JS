@@ -1,0 +1,18 @@
+body{
+    background-color: aqua;
+}
+
+
+.conteiner h1{
+    color: black;
+    text-align: center;
+}
+
+.conteiner {
+    background-color: white;
+    max-width: 550px;
+    margin: 0px auto;
+    height: 200px;
+    padding: 15px;
+   margin-top: 150px;
+}

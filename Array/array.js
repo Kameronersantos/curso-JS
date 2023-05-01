@@ -27,8 +27,16 @@ console.log(a)
 console.log(a.slice(0,3)); // eu fatio o array nesse caso peguei 0 até o 3
 console.log(a.slice(0 -2)); // fatio com numeros negativos é pego os dois últimos
 
-// para saber sé vc está trabalhando com array
+// para saber sé vc está trabalhando com array da também para saber quando vc está
+// trabalhando com objeto date ou só com objeto
+const o  = {}
+const d = new Date();
+const n = 2;
 console.log(a instanceof Array);
+console.log(o instanceof Array); // quando vc verifica sé um objeto é array retorna false
+console.log(d instanceof Date); // retorna true o objeto date
+console.log(p instanceof String); // mesmo p sendo uma String retorna false
+console.log(n instanceof Number); // mesmo n sendo um Number retorna false
 
 // um valor de const é mutável apenas como Array ou Objeto
 // como variavel essa mudança de valor não se aplica
@@ -40,28 +48,28 @@ array[0] = 1024;
 console.log(array); // [ 1024, 2, 3, 4 ]
 
 // ISSO NÃO PODE
-const array = [1, 2, 3, 4, 5];
-array = 'Legal';
+const arra = [1, 2, 3, 4, 5];
+// arra = 'Legal'; // deixa em comentario para não dar erro
 
 
 // exercicío
 
 var numero = 1;
-var array = [3,4,5,6,7,8];
-console.log(array.slice(1,6))
+var aray = [3,4,5,6,7,8];
+console.log(aray.slice(1,6))
 
 
 function factorial(a,ini,ifin){
    if( a.length < 0) throw new Error('array não pode ter nada ');
-   var ini = array.slice(0,1);
-   var ifin = array.slice(4,5);
+   var ini = aray.slice(0,1);
+   var ifin = aray.slice(4,5);
    
    for(var inicio = ini; ini < ifin; );
  
  
 
 }
-console.log(factorial(array,array[0],array[5]))
+console.log(factorial(aray,aray[0],aray[5]))
 
 
 var somar = function(a) {

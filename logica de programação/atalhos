@@ -1,17 +1,19 @@
-ctrl + n -> abrir um novo arquivo
-ctrl + o -> abrir um arquivo que vc ja tem
-ctrl + k ctrl + -> o abre o diritorio do arquivo(onde fica as pastas)
-ctrl + b -> abre ou fecha a aba lateral
-ctrl + f -> barra de busca
-ctrl + h -> substitui uma palavra pela outra 
-ctrl + alt + enter -> substitui todas as palavras de uma vez
-ctrl + ; -> acresenta ou tira uma linha de comentario
-shift + alt + seta pra baixo -> duplica linha
-alt + seta pra baixo -> move linha para baixo
-ctrl + d -> adiciona seleção da mesma palavra
-ctrl + l -> seleciona uma linha
-ctrl + tab -> abre o menu para selecionar abas
-ctrl + pgup ou pgdn -> ele navega entre as suas abas
-ctrl + g -> acessa linha ou colunas
-ctrl + ] -> divide a tela do vsCode para visualizar duas telas ao mesmo tempo
-ctrl + shift + p -> envelopa a tag que vc selecionou
+// ctrl + n -> abrir um novo arquivo
+// ctrl + o -> abrir um arquivo que vc ja tem
+// ctrl + k ctrl + -> o abre o diritorio do arquivo(onde fica as pastas)
+// ctrl + b -> abre ou fecha a aba lateral
+// ctrl + f -> barra de busca
+// ctrl + h -> substitui uma palavra pela outra 
+// ctrl + alt + enter -> substitui todas as palavras de uma vez
+// ctrl + ; -> acresenta ou tira uma linha de comentario
+// shift + alt + seta pra baixo -> duplica linha
+// alt + seta pra baixo -> move linha para baixo
+// ctrl + d -> adiciona seleção da mesma palavra
+// ctrl + l -> seleciona uma linha
+// ctrl + tab -> abre o menu para selecionar abas
+// ctrl + pgup ou pgdn -> ele navega entre as suas abas
+// ctrl + g -> acessa linha ou colunas
+// ctrl + ] -> divide a tela do vsCode para visualizar duas telas ao mesmo tempo
+// ctrl + shift + p -> envelopa a tag que vc selecionou
+// F8 -> faz o console.log
+// F9 -> cancela o console.log

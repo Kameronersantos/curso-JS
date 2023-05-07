@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Roboto:wght@500&display=swap'); 
+:root{
+--corDeFundo:rgb(13, 94, 13);
+--fonteDoTimer:font-family: 'PT Sans', sans-serif;
+--corDaFonte:rgb(206, 3, 3);
+--fontePadrao:font-family:'Open Sans', sans-serif;
+}
+
+body{
+    background-color: rgb(13, 94, 13);
+    font-family: var(--fontePadrao);
+}
+
+.conteiner{
+ padding: 15px;   
+ background-color: white;
+ color: black;
+ max-width: 500px;
+ height: 200px;
+ margin: 0px auto;
+ margin-top: 140px;
+ border-radius: 10px;
+}
+#relogio{
+font-family: var(--fonteDoTimer);
+font-size: 3.0em;
+}
+
+

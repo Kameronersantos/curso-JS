@@ -19,10 +19,10 @@ const time = setInterval(function(){console.log(MostraHora())},1000);
 // da para colocar setInterval em uma variavel
 
 
-setTimeout(function(){clearInterval(time)},3000) // Essa função só executa um evento só uma vez 
+setTimeout(function(){clearInterval(time)},50000) // Essa função só executa um evento só uma vez 
 // é vc determina o quando vai ser executado
 
 // clearInterval ele para a função setInterval
 // clearTimeout  ele para a função setTimeout
 
-setTimeout(function(){console.log('parei')}, 5000)
+// setTimeout(function(){console.log('parei')}, 5000)

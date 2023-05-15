@@ -26,3 +26,13 @@ setTimeout(function(){clearInterval(time)},50000) // Essa função só executa u
 // clearTimeout  ele para a função setTimeout
 
 // setTimeout(function(){console.log('parei')}, 5000)
+
+// exemplo 
+
+function InicieMeuRelogio(){ // inicia a o gethour()
+    time = setInterval(function(){
+        segundos++ // aqui o segundo repete de acordo com a conta da explicação de baixo
+     sec.innerHTML = gethour(segundos) // segundos * 1000 para teteminar quantos segundos contara nesse caso contara 0 vezes mil milesegundos
+    // para dar 1 segundo
+    // veja abaixo da função o que acontece ao acresentar mais zeros 
+ },1000)}

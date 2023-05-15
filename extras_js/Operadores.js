@@ -3,7 +3,7 @@
 // - menos -> subtração
 // * mutiplicação
 // / divisão
-// ** ponteciação
+// ** ponteciação // aqui verifica ao quadrado exemplo: 5 ** 2 = 25
 // %  resto da divisão
 // ++ incremento
 // -- decremento
@@ -66,4 +66,9 @@ let num4 = "44"
 console.log(num1 * num4) // aqui o JavaScript da uma mãozinha
 let num5 = parseFloat("46.8") // comverte o numero para decimais
 let n3 = Number(num3)
+
+num5 = parseFloat(num5.toFixed(2)) // só toFixed() não resolve o problema tem que usar o parseFloat para deixar inteiro 
+//ou 
+num5 = Number(num5.toFixed(2)) // também da certo 
+console.log(Number.isInteger(num5))
 

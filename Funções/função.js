@@ -39,3 +39,52 @@ const quadrada = n => Math.sqrt(n)
 
 let re = quadrada(100)
 console.log(quadrada(100))
+
+
+// maneiras de declarar funções
+
+// as formas de declarar função 
+
+// 1 forma (function hoisting) // significa que vai elevar as declarações de funções e variaveis declarada com a 
+// palavra var pro topo do nosso JavaScript isso significa que posso chamar antes ou depois da função ser declarada
+falaOi() // antes de ter declarado a função 
+function  falaOi(){
+console.log('oi');
+}
+falaOi() // ou após ter declarado a função 
+
+// As funções são objetos de primeira class(as funções são tratadas como dados) // isso se chama function expression
+
+const souUMDado = function(){ // um const receber uma função é completamenente normal vc vai encontrar muito isso
+    console.log('sou um dado');
+} // agora eu posso executar essa variavel como uma função normal
+ 
+
+function executeFunction(funcao){
+    console.log('Vou executar sua função logo abaixo')
+    funcao
+};
+executeFunction(souUMDado()) // posso executar funções com um parametro sendo uma função
+
+
+const fu = () => {console.log('Sou uma ARRON function')} // isso é uma ARON FUNCTION é normalmete é mais usada para uma função mais curta
+ fu()
+
+//  todas as funções são tratadas como objetos de primeira class
+
+// essa função anonima é tratada como parâmetro do setInterval
+setInterval(function(){ // o setInterval é o excelente exemplo como 
+    // função é tratado como um dado
+},2000)
+
+// dentro de um objeto eu posso ter uma função
+const objeto ={ 
+    falar: function(){
+        console.log('Estou falando')
+    },
+    escutar(){
+        console.log('Estou escutando')
+    }
+    
+}
+objeto.falar() // assim que executa uma função dentro de um objeto

@@ -6,7 +6,7 @@ let inicializar; // underfined // uma variavel que não tem um valor definido ta
 const nulo = null; // null -> tambem não a ponta pra nenhum local na memoria
 
 // diferencias de null e umderfined
-// null eu como programador ira em alumas situações irei propositalmente deixar null pra -> não a ponta pra nenhum local na memoria
+// null eu como programador ira em algumas situações irei propositalmente deixar null pra -> não a ponta pra nenhum local na memoria
 
 // umderfined é propría linguagens JavaScript que ultiliza isso o programador não tem comtrole sobre isso
 

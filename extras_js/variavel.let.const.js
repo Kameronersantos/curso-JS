@@ -19,7 +19,7 @@ console.log(fullName, fullname) // variaveis com letras maiusculas e minusculas 
 // de nomes significativos pras variaveis
 // não da pra redeclarar variaveis com let
 
-//const inicializar1 // ao não inicializar uma const da ERRO
+//const inicializar1 // ao não inicializar uma const sem valor da ERRO 
 const nomes = 'odair';
 // nomes = santos; // na const o valor da inicialização não pode ser modificado depois
 console.log(nomes) // aqui vai ser odair e não tem como altera isso

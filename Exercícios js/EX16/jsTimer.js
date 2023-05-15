@@ -46,7 +46,7 @@ Iniciar.addEventListener('click',function(e){ // Iniciar
             PararMeuRelogio()
             sec.style.color = 'red'
         })
-        Reniciar.addEventListener('click',function(e){ // Reniciar
+        Reniciar.addEventListener('click',function(){ // Reniciar
             
             RenicieMeuRelogio()
             sec.style.color = 'black'

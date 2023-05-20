@@ -60,7 +60,57 @@ function função4({nome, sobrenome,idade}){
 console.log(nome,sobrenome,idade)
 }
 função4({nome:'luis',sobrenome:'otavio',idade:'25'})
+// da para fazer Atribuição via desistruturação no parâmetro de uma função 
+// para isso vc coloca um ARRAY ou um OBJETO no parâmetro é os valores que vc quer desistruturar
 function função5([valor1,valor2,valor3]){
-console.log( )
+console.log(valor1,valor2,valor3 )
 }
-função5({nome:'luis',sobrenome:'otavio',idade:'25'})
+função5(['Fernanda','Mendes',15]) // é no argumento o valor que vc quer adicionar
+
+function conta(operador,acumulador,...numeros){ // (...) é o resto da operação é utilizado quando a muitos argumentos no final
+    // é so pode ser utilizado no ultimo parâmetro por isso quando vc tiver que usar um monte de valores em um parâmetro 
+    // acresente (...) pq esse parâmetro vai pegar o resto dos valores é use (...) no ultimo parâmetro 
+    // sé não vai dar erro
+    for(v of numeros){
+       if(operador === '+') acumulador += v
+       if(operador === '-') acumulador -= v
+       if(operador === '/') acumulador /= v
+       if(operador === '*') acumulador *= v
+    }
+console.log(acumulador)
+}
+conta('+',0, 23,45,2,3,65,70) // para usar um operador como variavel tem que deixa-lo como string "+";
+
+const op = '+';
+// não da para chamar uma variavel como operador é usa-lo para somar ou outro tipo de aquação só da para concatenar
+// porem vc pode usar um operador como argumento de uma função ou parâmetro
+const com = op === '+' ? ` 2 ${op} 2 ` : false
+console.log(com)
+
+
+// function express
+const conta1 = function (operador,acumulador,...numeros){  
+    for(v of numeros){
+       if(operador === '+') acumulador += v
+       if(operador === '-') acumulador -= v
+       if(operador === '/') acumulador /= v
+       if(operador === '*') acumulador *= v
+    }
+console.log(acumulador)
+}; // em uma função que está numa variavel sempre ponha o ponto é virgula depois dos {conchetes};
+conta1('*',2,32,4,5,6,12,5)
+
+
+const conta2 = function(operador,acumulador,...numeros){  
+console.log(arguments) // arguments funciona em function express
+}; 
+conta2('*',2,32,4,5,6,12,5)
+
+
+function argumentos(...arg){ // o resto da operação(...) faz o mesmo trabalho que arguments então vc decide qual usar
+//  o resto da operação(...) vau ser usado em qualquer tipo de função function express, Arron function ou outro tipo
+// quando for mandar parâmetros indeterminados(na linha 1 até a linha 40 desse exercicío)tipo 10,20,30,40 numeros de argumentos
+// é fazer conta de todos eles usa o resto da operação() ou arguments o que vc achar melhor
+console.log(arg)
+};
+argumentos(2,3,4,5,6,7,8,09,7,65,4,4,2,2,4,33,2,2)

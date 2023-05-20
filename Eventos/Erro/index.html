@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERRO em carregar uma imagem</title>
+</head>
+<body>
+    
+<img src="image.gif" onerror="NaoCarregouImagem()">
+
+<p>Uma função é acionada se ocorrer um erro ao carregar a imagem. A função mostra uma caixa de alerta com um texto.
+Neste exemplo nos referimos a uma imagem que não existe, portanto ocorre o evento onerror.</p>
+
+<script>
+function NaoCarregouImagem() {
+  alert('A imagem não pôde ser carregada.');
+}
+</script>
+</body>
+</html>

@@ -56,4 +56,25 @@ function f2callback(){
 
 function f3callback(){
     console.log('Olá, Mundo!');
-}
+};
+
+// funções imediatas ou (IIFE) -> Immediately invoked function express
+
+(function(idade,peso,altura){ // esse tipo de função é executada imediatamente e não toca o escopo global
+ const sobrenome = 'antonio'
+    function criaNome(nome){
+        return nome + ' ' + sobrenome
+    };
+
+    function falaNome(){
+        console.log(criaNome('luiz'))
+    };
+    
+    falaNome();
+    console.log(idade,peso,altura)
+    
+}) 
+(25,'75 Kg',54);
+
+// para essa função funcionar tem que tar dentro de um parênteses (function(){})
+// para chamar esse tipo de função só precisa mostrar o parênteses vazio assim -> ()

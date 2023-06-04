@@ -2,7 +2,7 @@ const frutas = ['Limão','Maça','Perá','Tangerina','Framboza','Ameixa']
 // quando não tem um Array dentro de um Array se chama vetor
 
 for(let i = 0; i < frutas.length; i++){
-   console.log( frutas[i]) // essa é a forma classica
+//    console.log(frutas[i]) // essa é a forma classica
 }
 
 // nessa forma o let(i) está lendo os indice do array

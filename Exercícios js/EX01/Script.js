@@ -8,41 +8,36 @@ function verificar() {
     } else {
         var fsex = document.getElementsByName('radsex') 
         var idade = ano - Number(fano.value)
-       var gênero = ''
+    
        var img = document.createElement('img')
        img.setAttribute('id', 'foto')
        if (fsex[0].checked) {
-        genero = 'Homem'
-        if (idade >= 0 && idade < 12) {
-            // Criança
-            img.setAttribute('src', 'menino-bebe-m.png')
-        } else if (  idade < 25)  { // homem jovem 
-            img.setAttribute('src', 'homem-jovem-m.png')   
-        } else if ( idade < 50) { // Homem meia idade
-        img.setAttribute('src', 'homem-meia-idade-m.png')
-        } else {
-            // Homem velho 
-         img.setAttribute('src','homem-velho-m.png')
-        }
+    
+        if(idade >= 0 && idade < 12) img.setAttribute('src', './imagens/menino-bebe-m.png')
+            // menino
+        if (idade > 12 && idade < 25)  img.setAttribute('src','./imagens/homem-jovem-m.png')
+            // Homem jovem
+         if (idade > 25 && idade < 50)  img.setAttribute('src','./imagens/homem-meia-idade-m.png')
+             // Homem meia idade
+          if(idade > 50 && idade <= 101) img.setAttribute('src','./imagens/homem-velho-m.png')
+             // Homem velha 
         
         
        } else if (fsex[1].checked) {
-        genero = 'Mulher'
-        if(idade >= 0 && idade < 12) {
+    
+        if(idade >= 0 && idade < 12) img.setAttribute('src', './imagens/menina-bebe-f.png')
             // Menina
-            img.setAttribute('src', 'menina-bebe-f.png')
-        } else if (idade < 25 ) {
+        if (idade > 12 && idade < 25)  img.setAttribute('src','./imagens/mulher-jovem-f.png')
             // Mulher jovem
-            img.setAttribute('src','mulher-jovem-f.png')
-        } else if (idade < 50) {
-            // Mulher meia idade
-            img.setAttribute('src','mulher-meia-idade-f.png')
-        } else {
-            // Mulher velha 
-            img.setAttribute('src','mulher-velha-f.png')
-        }
+         if (idade > 25 && idade < 50)  img.setAttribute('src','./imagens/mulher-meia-idade-f.png')
+             // Mulher meia idade
+          if(idade > 50 && idade <= 101) img.setAttribute('src','./imagens/mulher-velha-f.png')
+             // Mulher velha 
+        
        }
-       res.innerHTML = `Detectamos ${genero} com ${idade} anos`
+       
+       res.innerHTML = `Detectamos  com ${idade} anos`
        res.style.textAlign = 'center' 
-    }   res.appendChild(img)
+       res.appendChild(img)
+    }   
 }

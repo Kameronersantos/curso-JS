@@ -20,8 +20,8 @@ let umaString = "Uma \"string\"" // caso vc precisar de aspas duplas (que bem di
  console.log(`${p} par e inpar`) // essa versão é melhor
 
  console.log(p.indexOf('palavra')) // ele pega o indice inicial da palavra
- console.log(p.indexOf('a',3)) // também podemos explicificar qual posição esta a palavra ou letra que nos queremos
- console.log(p.lastIndexOf('a')) // ele começa no fim é vai até o inicio
+ console.log(p.indexOf('a',3), 'indexOf') // também podemos explicificar qual posição esta a palavra ou letra que nos queremos
+ console.log(p.lastIndexOf('a'), 'indexOf') // ele começa no fim é vai até o inicio
  console.log(p.indexOf('a'));
  console.log(p.match(/[a-z]/g)) // localiza todas minusculas é isso que esta dentro do parêntese é uma expressão regular
  console.log(p.match(/[a-z]/)) // da detalhes sobre elemento

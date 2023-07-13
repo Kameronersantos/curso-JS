@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Função JavaScript</title>
+  <script>
+    // Função para obter a imagem com base no nome e idade
+    function obterImagem(nome, idade) {
+      var baseDeDados = [
+        {
+          nome: 'Kamerone',
+          imagens: ['./imagens/HomemNB.jpg', './imagens/HomemAB.jpg', './imagens/HomemVB.jpg']
+        },
+        {
+          nome: 'Julia',
+          imagens: ['./imagens/mulherN.jpg', './imagens/mulherA.jpg', './imagens/mulherV.jpg']
+        },
+        {
+          nome: 'Cirilo',
+          imagens: ['./imagens/HomemNN.jpg', './imagens/HomemAN.jpg', './imagens/HomemVN.jpg']
+        }
+      ];
+
+      var objetoEncontrado = baseDeDados.find(function(objeto) {
+        return objeto.nome === nome;
+      });
+
+      if (objetoEncontrado) {
+        if (idade < 30) {
+          return objetoEncontrado.imagens[0]; // Imagem para "novo"
+        } else if (idade >= 30 && idade < 60) {
+          return objetoEncontrado.imagens[1]; // Imagem para "meia-idade"
+        } else {
+          return objetoEncontrado.imagens[2]; // Imagem para "velho"
+        }
+      }
+
+      return null; // Retorna null se não encontrar o nome na base de dados
+    }
+
+    // Função para chamar a função obterImagem e exibir a imagem na página
+    function exibirImagem() {
+      var nome = document.getElementById('nome').value;
+      var idade = parseInt(document.getElementById('idade').value);
+
+      var imagem = obterImagem(nome, idade);
+
+      if (imagem) {
+        var imgElement = document.createElement('img');
+        imgElement.src = imagem;
+
+        var divResultado = document.getElementById('resultado');
+        divResultado.innerHTML = ''; // Limpa o conteúdo existente
+
+        divResultado.appendChild(imgElement);
+      } else {
+        document.getElementById('resultado').textContent = 'Nome não encontrado na base de dados.';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Exemplo de Função JavaScript</h1>
+
+  <form>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+
+    <br>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade">
+
+    <br>
+
+    <button type="button" onclick="exibirImagem()">Exibir Imagem</button>
+  </form>
+
+  <div id="resultado"></div>
+</body>
+</html>

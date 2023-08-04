@@ -58,7 +58,16 @@ console.log(Object.values(produto2)) // é mesma coisa de Object.keys porém ao 
 // os valores das chaves
 console.log(Object.entries(produto2)) // aqui vc ve as chaves é os valores juntos em um array
 
+for(let [chave,valor] of Object.entries(produto2)) {  // da para usar atribuição via desistruturação com 
+   // Objeto.entries
+   console.log(chave,valor)
+}
+for(let valor of Object.entries(produto2)) {  
 
+   console.log(valor[0], valor[1]) // assim também funciona a atribuição via desistruturação com 
+   // Objeto.entries
+};
+ 
 const array = [1,2,3,4,5,6];
 const outroArray = [...array];
 console.log(array) // o spread funciona em arrays

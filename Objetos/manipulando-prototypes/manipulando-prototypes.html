@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// todas as funções construtoras tem Object.prototype
+// new Object -> Object.prototype
+const objA = {
+    chaveA: 'A',
+    // O Object.prototype está em uma variavel chamada de _proto_ é isso daqui acontece por baixo dos panos 
+    // sem nós fazer nada 
+    // [{prototype}] Object // ao olhar no console do arquivo html vc encontrara essa variavel
+};
+const objB = {
+    chaveB: 'B',
+    // tem como o prototype não ser o Object.prototype ele pode ser um objeto criado manualmente como 
+    // o ObjA por exemplo
+};
+   Object.setPrototypeOf(objB,objA) // o objeto (objA) se tornou o prototype do (objB) é por caso disso
+// o objB consegue acesar objA
+
+const objC = new Object();
+objC.chaveC = 'C';
+Object.setPrototypeOf(objC,objB);
+console.log(objC.chaveA) 
+
+// a cadeia desses objetos ficou assim
+// objC -> objB --> objA ---> Object.prototype
+
+// para vc acessar um prototype de um objeto não utilize _proto_  utilize Object.getPrototypeOf
+// Object.setPrototypeOf // ele configura o prototype 
+// Object.getPrototypeOf // ele mostra o prototype do objeto escolhido como parâmetro
+ 
+function Produto(nome,preço){
+    this.nome = nome;
+    this.preço = preço;
+    // agora sabemos que não devemos fazer metodos dentro da função contrutora
+};
+const p1 = new Produto('leite', 39.97);
+// podemos fazer metodos fora da função usando o prototype
+Produto.prototype.desconto = function(percentuao) {
+    this.preço = this.preço - (this.preço * (percentuao / 100));
+};
+Produto.prototype.AumentaPreço = function(percentuao) {
+    this.preço = this.preço + (this.preço * (percentuao / 100))
+};
+p1.desconto(100)
+console.log(p1)
+
+
+const p2 = {
+    nome: 'Caneca',
+    preço: 62.99,
+};
+Object.setPrototypeOf(p2, Produto.prototype) // para que o objeto literal também use o metodo da função construtora
+p2.AumentaPreço(9)
+console.log(p2)
+</script>
+</html>

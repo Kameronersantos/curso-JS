@@ -32,11 +32,13 @@ console.log(a.slice(0 -2)); // fatio com numeros negativos é pego os dois últi
 const o  = {}
 const d = new Date();
 const n = 2;
-console.log(a instanceof Array);
+const ar = []
+console.log(ar instanceof Array); // é array é volta true
 console.log(o instanceof Array); // quando vc verifica sé um objeto é array retorna false
 console.log(d instanceof Date); // retorna true o objeto date
 console.log(p instanceof String); // mesmo p sendo uma String retorna false
 console.log(n instanceof Number); // mesmo n sendo um Number retorna false
+console.log(o instanceof Object); // é um Objeto é volta true
 
 // um valor de const é mutável apenas como Array ou Objeto
 // como variavel essa mudança de valor não se aplica
@@ -118,13 +120,13 @@ console.log(objeto.y[0])
 
 objeto[2] = "one"
 console.log()
-var a = [1,2,3,4,];
+var arr = [1,2,3,4];
 console.log(a.length)
 
-a[-1.23] = true;
-a["1000"] = 0;
-a[1.000]
-console.log(a)
+arr[-1.23] = true;
+arr["1000"] = 0;
+arr[1.000]
+console.log(arr)
 
 
 
